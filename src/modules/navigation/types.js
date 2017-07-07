@@ -1,0 +1,5 @@
+export const SEARCH_INPUT = 'navigation/SEARCH_INPUT'
+export const OPEN_DRAWER = 'navigation/OPEN_DRAWER'
+export const CLOSE_DRAWER = 'navigation/CLOSE_DRAWER'
+export const OPEN_USER_MENU = 'navigation/OPEN_USER_MENU'
+export const CLOSE_USER_MENU = 'navigation/CLOSE_USER_MENU'
