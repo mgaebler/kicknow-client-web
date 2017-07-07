@@ -1,0 +1,2 @@
+export const SET_CURRENT_POSITION = 'position/SET_CURRENT_POSITION_SUCCESS'
+export const SET_POSITION_STATE = 'position/SET_POSITION_STATE'

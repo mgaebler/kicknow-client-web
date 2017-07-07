@@ -1,0 +1,12 @@
+[ignore]
+.*/node_modules/
+
+[include]
+/src/*.js
+
+[libs]
+
+[options]
+emoji=true
+
+[lints]
