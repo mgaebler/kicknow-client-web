@@ -23,7 +23,6 @@ class Root extends Component {
 
   render() {
     const { snacks } = this.props
-    console.log(snacks)
     return (
       <div className="App">
         <Navigation />

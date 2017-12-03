@@ -10,6 +10,9 @@ import {
 } from 'react-mdc-web'
 import { Link } from 'react-router-dom'
 
+import { checkIn } from '../modules/user/operations'
+import { addLocation } from '../modules/locations/operations'
+
 const LocationListItem = ({ item, user }) => {
   return (
     <Card key={item['@id']}>
@@ -28,15 +31,16 @@ const LocationListItem = ({ item, user }) => {
       </Link>
       <CardText>
         {/* //@todo add table icons here */}
-        Leonhard
+        "Leonhard"
       </CardText>
       <CardActions>
-        <Button compact>action 1</Button>
+        {/* <Button compact>action 1</Button> */}
 
         <Button
           disabled={user.isAnonymous}
           onClick={() => {
-            alert('no functionality, yet')
+            checkIn(user.uid, item['@id'])
+            addLocation(item)
             // this.props.dispatch(checkInUser(user.uid))
           }}
           compact

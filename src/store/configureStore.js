@@ -5,13 +5,13 @@ import thunk from 'redux-thunk'
 import { ajaxStatusReducer as ajaxCallsInProgress } from '../modules/loader/reducers'
 import { searchInput, drawer, userMenu } from '../modules/navigation/reducers'
 import { position } from '../modules/position/reducers'
-import { items, selectedItem } from '../modules/locations/reducers'
+import { items } from '../modules/locations/reducers'
 import { snackReducer as snacks } from '../modules/snacks/reducers'
 import { user } from '../modules/auth/operations'
 
 const rootReducer = combineReducers({
   items,
-  selectedItem,
+  // selectedItem,
   // navigation
   searchInput,
   drawer,

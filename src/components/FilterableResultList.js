@@ -13,7 +13,13 @@ export default class FilterableResultList extends React.Component {
 
   render() {
     let items = this.props.items.items.map(item => {
-      return <LocationListItem item={item} />
+      return (
+        <LocationListItem
+          key={item['@id']}
+          item={item}
+          user={this.props.user}
+        />
+      )
     })
 
     return <div id="Results">{items}</div>

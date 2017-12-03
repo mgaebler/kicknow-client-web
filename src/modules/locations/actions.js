@@ -1,4 +1,4 @@
-import { REQUEST_ITEMS, RECEIVE_ITEMS, SELECT_ITEM } from './types'
+import { REQUEST_ITEMS, RECEIVE_ITEMS } from './types'
 
 export function createQueryObject(searchPhrase = '', geoPoint = false) {
   // console.log('geoPoint', geoPoint)
@@ -67,12 +67,5 @@ export function receiveItems(data) {
     type: RECEIVE_ITEMS,
     items: data,
     receivedAt: Date.now()
-  }
-}
-
-export function selectItem(item) {
-  return {
-    type: SELECT_ITEM,
-    item
   }
 }

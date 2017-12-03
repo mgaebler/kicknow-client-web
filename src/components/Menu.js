@@ -30,6 +30,9 @@ class Menu extends React.Component {
             <DrawerHeader>
               <DrawerHeaderContent>Menu</DrawerHeaderContent>
             </DrawerHeader>
+            <Link to="/user/current">
+              <Icon name="account_circle" />Profile
+            </Link>
             <Link to="/search-page">
               <Icon name="search" />Search Page
             </Link>

@@ -28,15 +28,15 @@ let initialItem = {
   index: ''
 }
 
-export function selectedItem(state = initialItem, action) {
-  // console.log(action)
-  switch (action.type) {
-    case types.SELECT_ITEM:
-      return {
-        id: action.item._id,
-        index: action.item._index
-      }
-    default:
-      return state
-  }
-}
+// export function selectedItem(state = initialItem, action) {
+//   // console.log(action)
+//   switch (action.type) {
+//     case types.SELECT_ITEM:
+//       return {
+//         id: action.item._id,
+//         index: action.item._index
+//       }
+//     default:
+//       return state
+//   }
+// }

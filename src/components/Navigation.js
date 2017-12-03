@@ -17,11 +17,10 @@ import {
   ToolbarSection,
   Icon,
   MenuAnchor,
-  MenuDivider,
   MenuItem,
   Menu
 } from 'react-mdc-web'
-import { Link } from 'react-router-dom'
+
 import DrawerMenu from './Menu'
 
 class Navigation extends React.Component {
@@ -89,13 +88,16 @@ class Navigation extends React.Component {
           right
           open={this.props.userMenu}
           onClose={() => {
-            // this.props.dispatch(closeUserMenu())
+            this.props.dispatch(closeUserMenu())
           }}
         >
-          <MenuItem>
-            <Link to={`/user/current`}>Profile</Link>
+          <MenuItem
+            onClick={() => {
+              signOut()
+            }}
+          >
+            Sign Out
           </MenuItem>
-          <MenuDivider />
           <MenuItem
             onClick={() => {
               signOut()

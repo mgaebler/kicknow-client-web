@@ -2,6 +2,8 @@ import * as actions from './actions'
 import locations from './test_locations'
 import { beginAjaxCall } from '../loader/operations'
 // const PLACES_ENDPOINT = 'http://private-f0df95-kicknow.apiary-mock.com/places'
+import firebase from 'firebase'
+const locationsRef = 'locations/'
 
 export function fetchItems() {
   return async (dispatch, getState) => {
@@ -27,4 +29,11 @@ export function fetchItems() {
       dispatch(actions.requestItems('fail'))
     }
   }
+}
+
+export function addLocation(location) {
+  return firebase
+    .database()
+    .ref(`${locationsRef}${location['@id']}`)
+    .set(location)
 }
